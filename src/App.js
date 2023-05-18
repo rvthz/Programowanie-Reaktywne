@@ -1,15 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Test1 from "./components/1-componentClass";
-import Test2 from "./components/2-componentFunctional";
-import QuizComponent from "./components/QuizComponent";
+import Navbar from "./components/navbar";
+import {Outlet} from "react-router-dom"
 
 function App() {
   return (
-    <div>
-      <QuizComponent/>
-    </div>
+      <div className="container-fluid">
+          <Navbar/>
+          <div className="container">
+              <Outlet/>
+          </div>
+      </div>
   );
 }
 
 export default App;
+
